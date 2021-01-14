@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.QLLoaiSach.Fragment_QLLoaiSach">
+    tools:context=".View.QLThanhVien.Fragment_QLThanhVien">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Thể loại sách" />
+        android:text="Quản lý thành viên" />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_qlls"
+        android:id="@+id/fab_qltv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
