@@ -3,12 +3,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".View.DoanhThu.Fragment_DoanhThu">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Doanh Thu" />
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/doanhthu_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Doanh thu"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/doanhthu_tv_ngaytitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Doanh thu ngày"
+                app:layout_constraintEnd_toStartOf="@+id/doanhthu_tv_ngay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doanhthu_tv_title" />
+
+            <TextView
+                android:id="@+id/doanhthu_tv_ngay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="200000 vnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/doanhthu_tv_ngaytitle"
+                app:layout_constraintTop_toBottomOf="@+id/doanhthu_tv_title" />
+
+            <TextView
+                android:id="@+id/doanhthu_tv_tuantitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="Doanh thu tuần"
+                app:layout_constraintEnd_toStartOf="@+id/doanhthu_tv_tuan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doanhthu_tv_title" />
+
+            <TextView
+                android:id="@+id/doanhthu_tv_tuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="1400000 vnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/doanhthu_tv_tuantitle"
+                app:layout_constraintTop_toBottomOf="@+id/doanhthu_tv_title" />
+
+            <TextView
+                android:id="@+id/doanhthu_tv_thangtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:text="Doanh thu ngày"
+                app:layout_constraintEnd_toStartOf="@+id/doanhthu_tv_thang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doanhthu_tv_title" />
+
+            <TextView
+                android:id="@+id/doanhthu_tv_thang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:text="6000000 vnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/doanhthu_tv_thangtitle"
+                app:layout_constraintTop_toBottomOf="@+id/doanhthu_tv_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </FrameLayout>

@@ -6,10 +6,10 @@
     tools:context=".View.QLSach.Fragment_QLSach">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Quản lý loại sách" />
+        android:layout_height="wrap_content"
+        android:id="@+id/qlsach_lv"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_qls"
         android:layout_width="wrap_content"

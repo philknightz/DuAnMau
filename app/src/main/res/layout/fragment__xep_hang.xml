@@ -3,12 +3,241 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".View.XepHang.Fragment_XepHang">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Xếp hạng" />
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/xephang_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Xếp hạng top 10"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top1"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="50dp"
+                android:text="Top 1"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top1name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top1name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Java"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top1"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top2"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="100dp"
+                android:text="Top 2"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top2name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top2name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="C#"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top2"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+            <TextView
+                android:id="@+id/xephang_tv_top3"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="150dp"
+                android:text="Top 3"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top3name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top3name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:text="Python"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top3"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+            <TextView
+                android:id="@+id/xephang_tv_top4"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="200dp"
+                android:text="Top 4"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top4name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top4name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:text="Kotlyn"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top4"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+            <TextView
+                android:id="@+id/xephang_tv_top5"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="250dp"
+                android:text="Top 5"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top5name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top5name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="250dp"
+                android:text="Javascripts"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top5"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top6"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="300dp"
+                android:text="Top 6"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top6name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top6name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:text="Tieng anh"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top6"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top7"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="350dp"
+                android:text="Top 7"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top7name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top7name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="350dp"
+                android:text="Lich su"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top7"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+            <TextView
+                android:id="@+id/xephang_tv_top8"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="400dp"
+                android:text="Top 8"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top8name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top8name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="400dp"
+                android:text="Dia ly"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top8"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+            <TextView
+                android:id="@+id/xephang_tv_top9"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="450dp"
+                android:text="Top 9"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top9name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top9name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="450dp"
+                android:text="Van hoc"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top9"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+            <TextView
+                android:id="@+id/xephang_tv_top10"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="500dp"
+                android:text="Top 10"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/xephang_tv_top10name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+
+            <TextView
+                android:id="@+id/xephang_tv_top10name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="500dp"
+                android:text="Kinh te"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/xephang_tv_top10"
+                app:layout_constraintTop_toBottomOf="@id/xephang_tv_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </FrameLayout>
