@@ -55,7 +55,7 @@ public class Fragment_QLPhieuMuon extends Fragment {
         phieuMuonList = phieuMuonDAO.getAllPhieuMuon();
         AdapterQLPhieuMuon qlpmAdapter = new AdapterQLPhieuMuon(getActivity(),phieuMuonList);
         qlpm_lv.setAdapter(qlpmAdapter);
-
+//        phieuMuonDAO.dropPhieuMuonTable();
         fab_phieumuon = view.findViewById(R.id.fab_phieumuon);
         dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.fab_phieumuon);

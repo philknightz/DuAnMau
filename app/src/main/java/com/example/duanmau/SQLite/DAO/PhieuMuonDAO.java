@@ -40,11 +40,11 @@ public class PhieuMuonDAO {
         values.put(thuVienOpenHelper.PHIEUMUON_COLUMN_TRASACH,phieuMuon.getTraSach());
         values.put(thuVienOpenHelper.PHIEUMUON_COLUMN_TIENTHUE,phieuMuon.getTienThue());
         return db.update(thuVienOpenHelper.PHIEUMUON_TABLE_NAME,values,
-                thuVienOpenHelper.PHIEUMUON_TABLE_NAME+"=?",
+                thuVienOpenHelper.PHIEUMUON_COLUMN_MAPM+"=?",
                 new String[]{String.valueOf(phieuMuon.getMaPM())});
     }
 
-    public int delete(String MaPM){
+    public int delete(int MaPM){
         return db.delete(thuVienOpenHelper.PHIEUMUON_TABLE_NAME,
                 thuVienOpenHelper.PHIEUMUON_COLUMN_MAPM+"=?",
                 new String[]{String.valueOf(MaPM)});
@@ -82,7 +82,7 @@ public class PhieuMuonDAO {
         return phieuMuonList;
     }
 
-    public void dropThuThuTable(){
+    public void dropPhieuMuonTable(){
         db.execSQL(thuVienOpenHelper.PHIEUMUON_DROP_TABLE);
         db.execSQL(thuVienOpenHelper.PHIEUMUON_CREATE_TABLE);
     }

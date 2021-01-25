@@ -61,7 +61,7 @@ public class Fragment_QLSach extends Fragment {
         sachList = sachDAO.getAllSach();
         AdapterQLSach qlsachAdapter = new AdapterQLSach(getActivity(),sachList);
         qlsach_lv.setAdapter(qlsachAdapter);
-
+//        sachDAO.dropSachTable();
         fab_thanhvien = view.findViewById(R.id.fab_sach);
         dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.fab_sach);

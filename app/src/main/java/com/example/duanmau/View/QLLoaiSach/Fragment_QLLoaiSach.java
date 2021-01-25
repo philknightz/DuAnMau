@@ -37,7 +37,6 @@ public class Fragment_QLLoaiSach extends Fragment {
     FloatingActionButton fab_thanhvien;
     TextInputLayout loaisach_ed_tenloai;
     Button loaisach_btn_xacnhan,loaisach_btn_huy;
-    TextView loaisach_tv_title;
     Dialog dialog ;
     public Fragment_QLLoaiSach() {
         // Required empty public constructor

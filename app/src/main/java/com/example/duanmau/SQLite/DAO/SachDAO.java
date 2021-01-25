@@ -76,7 +76,7 @@ public class SachDAO {
         return sachList;
     }
 
-    public void dropThanhVienTable(){
+    public void dropSachTable(){
         db.execSQL(thuVienOpenHelper.SACH_DROP_TABLE);
         db.execSQL(thuVienOpenHelper.SACH_CREATE_TABLE);
     }
