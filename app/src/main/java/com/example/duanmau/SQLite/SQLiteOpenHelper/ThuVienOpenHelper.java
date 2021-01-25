@@ -68,8 +68,8 @@ public class ThuVienOpenHelper extends SQLiteOpenHelper {
             + PHIEUMUON_COLUMN_MATV + " INTEGER REFERENCES "+THANHVIEN_TABLE_NAME+"("+THANHVIEN_COLUMN_MATV+")"+","
             +PHIEUMUON_COLUMN_MASACH+" INTEGER REFERENCES "+ SACH_TABLE_NAME+"("+SACH_COLUMN_MASACH+")" +","
             +PHIEUMUON_COLUMN_TIENTHUE + " INTEGER,"
-            +PHIEUMUON_COLUMN_NGAYMUON + " DATE,"
-            +PHIEUMUON_COLUMN_TRASACH + " INTEGER,";
+            +PHIEUMUON_COLUMN_NGAYMUON + " VARCHAR,"
+            +PHIEUMUON_COLUMN_TRASACH + " INTEGER)";
 
     @Override
     public void onCreate(SQLiteDatabase db) {

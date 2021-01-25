@@ -30,7 +30,7 @@
     <item android:title="Người dùng">
         <menu>
             <item
-                android:title="Thêm người dùng"
+                android:title="Quản lý người dùng"
                 android:id="@+id/themnguoidung"/>
             <item
                 android:title="Đổi mật khẩu"

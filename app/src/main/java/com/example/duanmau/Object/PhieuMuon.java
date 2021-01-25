@@ -2,14 +2,14 @@ package com.example.duanmau.Object;
 
 public class PhieuMuon {
     private int MaPM;
-    private int MaTT;
+    private String MaTT;
     private int MaTV;
     private int MaSach;
     private String NgayMuon;
     private int TraSach;
     private int TienThue;
 
-    public PhieuMuon(int maPM, int maTT, int maTV, int maSach, String ngayMuon, int traSach, int tienThue) {
+    public PhieuMuon(int maPM, String maTT, int maTV, int maSach, String ngayMuon, int traSach, int tienThue) {
         MaPM = maPM;
         MaTT = maTT;
         MaTV = maTV;
@@ -30,11 +30,11 @@ public class PhieuMuon {
         MaPM = maPM;
     }
 
-    public int getMaTT() {
+    public String getMaTT() {
         return MaTT;
     }
 
-    public void setMaTT(int maTT) {
+    public void setMaTT(String maTT) {
         MaTT = maTT;
     }
 

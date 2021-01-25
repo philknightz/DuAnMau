@@ -72,4 +72,11 @@ public class ThuThuDAO {
         return thuThuList;
     }
 
+    public void dropThuThuTable(){
+        db.execSQL(thuVienOpenHelper.THUTHU_DROP_TABLE);
+        db.execSQL(thuVienOpenHelper.THUTHU_CREATE_TABLE);
+    }
+
+
+
 }

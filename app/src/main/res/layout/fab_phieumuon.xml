@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -15,11 +14,11 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/themnguoidung_tv_title"
+                android:id="@+id/phieumuon_tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:text="Thêm người dùng"
+                android:text="Thêm phiếu mượn"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -29,17 +28,17 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/themnguoidung_ed_matt"
+                android:id="@+id/phieumuon_ed_matt"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/themnguoidung_tv_title">
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_tv_title">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tên đăng nhập"
+                    android:hint="Mã thủ thư"
                     android:padding="10dp"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -47,86 +46,114 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/themnguoidung_ed_hoten"
+                android:id="@+id/phieumuon_ed_matv"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/themnguoidung_ed_matt">
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_ed_matt">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Họ tên"
+                    android:hint="Mã thành viên"
                     android:padding="10dp"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/themnguoidung_ed_matkhau"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/phieumuon_ed_masach"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:passwordToggleEnabled="true"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/themnguoidung_ed_hoten"
-                >
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:paddingLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:layout_marginEnd="20dp"
-                        android:hint="Mật khẩu"
-                        android:inputType="textPassword" />
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_ed_matv">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mã sách"
+                    android:padding="10dp"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/phieumuon_ed_ngaymuon"
                 android:layout_marginStart="20dp"
-                app:passwordToggleEnabled="true"
-                android:id="@+id/themnguoidung_ed_nhaplaimatkhau"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/themnguoidung_ed_matkhau">
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_ed_masach">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:paddingLeft="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nhập lại mật khẩu"
-                    android:inputType="textPassword"
+                    android:hint="Ngày mượn"
+                    android:padding="10dp"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/phieumuon_ed_trasach"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_ed_ngaymuon">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Trả sách"
+                    android:padding="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/phieumuon_ed_tienthue"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_ed_trasach">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tiền thuê"
+                    android:padding="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/themnguoidung_btn_xacnhan"
+                android:id="@+id/phieumuon_btn_xacnhan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="25dp"
                 android:text="Xác nhận"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/themnguoidung_btn_huy"
+                app:layout_constraintEnd_toStartOf="@+id/phieumuon_btn_huy"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/themnguoidung_ed_nhaplaimatkhau" />
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_ed_tienthue" />
 
             <Button
-                android:id="@+id/themnguoidung_btn_huy"
+                android:id="@+id/phieumuon_btn_huy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Huỷ"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/themnguoidung_btn_xacnhan"
-                app:layout_constraintTop_toBottomOf="@+id/themnguoidung_ed_nhaplaimatkhau" />
+                app:layout_constraintStart_toEndOf="@+id/phieumuon_btn_xacnhan"
+                app:layout_constraintTop_toBottomOf="@+id/phieumuon_ed_tienthue" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
