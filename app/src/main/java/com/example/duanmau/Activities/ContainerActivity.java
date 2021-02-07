@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import com.example.duanmau.R;
 import com.example.duanmau.View.DoanhThu.Fragment_DoanhThu;
-import com.example.duanmau.View.DoiMatKhau.Fragment_DoiMatKhau;
 import com.example.duanmau.View.QLLoaiSach.Fragment_QLLoaiSach;
 import com.example.duanmau.View.QLPhieuMuon.Fragment_QLPhieuMuon;
 import com.example.duanmau.View.QLSach.Fragment_QLSach;
@@ -96,12 +95,6 @@ public class ContainerActivity extends AppCompatActivity implements NavigationVi
             case R.id.themnguoidung:{
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.container_fragment,new Fragment_ThemNguoiDung());
-            fragmentTransaction.commit();
-                break;
-            }
-            case R.id.doimatkhau:{
-            fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.container_fragment,new Fragment_DoiMatKhau());
             fragmentTransaction.commit();
                 break;
             }

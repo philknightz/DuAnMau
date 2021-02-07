@@ -4,15 +4,19 @@
         <menu>
             <item
                 android:title="Quản lý phiếu mượn"
+                android:icon="@drawable/qlpm"
                 android:id="@+id/quanlyphieumuon"/>
             <item
                 android:title="Quản lý loại sách"
+                android:icon="@drawable/qls"
                 android:id="@+id/quanlyloaisach"/>
             <item
                 android:title="Quản lý sách"
+                android:icon="@drawable/qlls"
                 android:id="@+id/quanlysach"/>
             <item
                 android:title="Quản lý thành viên"
+                android:icon="@drawable/member"
                 android:id="@+id/quanlythanhvien"/>
         </menu>
     </item>
@@ -21,9 +25,11 @@
         <menu>
             <item
                 android:title="Xếp hạng lượt mượn"
+                android:icon="@drawable/rank"
                 android:id="@+id/xephang"/>
             <item
                 android:title="Doanh thu"
+                android:icon="@drawable/money"
                 android:id="@+id/doanhthu"/>
         </menu>
     </item>
@@ -31,12 +37,11 @@
         <menu>
             <item
                 android:title="Quản lý người dùng"
+                android:icon="@drawable/user"
                 android:id="@+id/themnguoidung"/>
             <item
-                android:title="Đổi mật khẩu"
-                android:id="@+id/doimatkhau"/>
-            <item
                 android:title="Đăng xuất"
+                android:icon="@drawable/logout"
                 android:id="@+id/dangxuat"/>
         </menu>
     </item>

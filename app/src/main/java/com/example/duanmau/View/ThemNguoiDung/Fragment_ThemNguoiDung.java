@@ -138,6 +138,7 @@ public class Fragment_ThemNguoiDung extends Fragment {
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         themnguoidung_ed_nhaplaimatkhau.setError("");
+                        themnguoidung_ed_matkhau.setError("");
                     }
 
                     @Override

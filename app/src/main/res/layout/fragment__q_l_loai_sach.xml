@@ -4,11 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.QLLoaiSach.Fragment_QLLoaiSach">
-
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/qlls_lv"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản lý loại sách"
+            android:layout_gravity="center"
+            android:textSize="30dp" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/qlls_lv"/>
+    </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_loaisach"
         android:layout_width="wrap_content"

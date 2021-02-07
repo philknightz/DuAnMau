@@ -78,6 +78,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Huỷ"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/thanhvien_btn_xacnhan"

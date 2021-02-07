@@ -4,12 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.QLSach.Fragment_QLSach">
-
-    <!-- TODO: Update blank fragment layout -->
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/qlsach_lv"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản lý sách"
+            android:layout_gravity="center"
+            android:textSize="30dp" />
+        <!-- TODO: Update blank fragment layout -->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/qlsach_lv"/>
+    </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_sach"
         android:layout_width="wrap_content"
