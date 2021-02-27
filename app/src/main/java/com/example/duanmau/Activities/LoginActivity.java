@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         login_error = findViewById(R.id.login_err);
 
         thuThuDAO = new ThuThuDAO(LoginActivity.this);
-
+        thuThuDAO.insert(new ThuThu("kiendtph12640","Kien","123456"));
         login_ed_matt.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

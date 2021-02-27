@@ -74,7 +74,7 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
             viewHolder.qlpm_adapter_mapm.setText("Mã phiếu mượn: "+phieuMuonList.get(position).getMaPM());
             viewHolder.qlpm_adapter_matt.setText("Mã thủ thư: "+phieuMuonList.get(position).getMaTT());
             viewHolder.qlpm_adapter_matv.setText("Mã thành viên: "+phieuMuonList.get(position).getMaTV());
-            viewHolder.qlpm_adapter_masach.setText("Mã thủ thư: "+phieuMuonList.get(position).getMaSach());
+            viewHolder.qlpm_adapter_masach.setText("Mã sách: "+phieuMuonList.get(position).getMaSach());
             viewHolder.qlpm_adapter_ngaymuon.setText("Ngày mượn: "+phieuMuonList.get(position).getNgayMuon());
             viewHolder.qlpm_adapter_trasach.setText("Trả sách: "+trasach);
             viewHolder.qlpm_adapter_tienthue.setText("Tiền thuê: "+phieuMuonList.get(position).getTienThue());
