@@ -41,9 +41,9 @@ public class Fragment_DoanhThu extends Fragment {
         doanhthu_tv_thang = view.findViewById(R.id.doanhthu_tv_thang);
 
         DoanhThuDao doanhThuDao = new DoanhThuDao(getContext());
-        int doanhThuNgay = doanhThuDao.getDoanhThu("01-02-2021","01-02-2021");
-        int doanhThuTuan = doanhThuDao.getDoanhThu("01-02-2021","08-02-2021");
-        int doanhThuThang = doanhThuDao.getDoanhThu("01-02-2021","28-02-2021");
+        int doanhThuNgay = doanhThuDao.getDoanhThu("01-02-2020","01-02-2020");
+        int doanhThuTuan = doanhThuDao.getDoanhThu("01-02-2020","08-02-2020");
+        int doanhThuThang = doanhThuDao.getDoanhThu("01-02-2020","28-02-2020");
 
         doanhthu_tv_ngay.setText(String.valueOf(doanhThuNgay));
         doanhthu_tv_tuan.setText(String.valueOf(doanhThuTuan));

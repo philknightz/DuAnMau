@@ -34,7 +34,7 @@ public class XepHangDao {
         while(!cursor.isAfterLast()){
             Top top = new Top();
             Sach sach = sachDAO.getOneSach(cursor.getString(cursor.getColumnIndex(thuVienOpenHelper.PHIEUMUON_COLUMN_MASACH)));
-            top.setTenSach(sach.getTenSach());
+            top.setTenSach(sach.getTenSach().toString());
             top.setSoLuong(Integer.parseInt(cursor.getString(cursor.getColumnIndex("soLuong"))));
             topList.add(top);
             cursor.moveToNext();

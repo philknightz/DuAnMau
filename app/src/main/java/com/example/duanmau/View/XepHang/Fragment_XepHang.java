@@ -48,7 +48,6 @@ public class Fragment_XepHang extends Fragment {
 
         List<Top> topList = new ArrayList<>();
         topList = xepHangDao.getTop();
-
         try{
             top1.setText(topList.get(0).getTenSach().toString());
         }catch (Exception e){
@@ -94,7 +93,7 @@ public class Fragment_XepHang extends Fragment {
         try{
             top8.setText(topList.get(7).getTenSach().toString());
         }catch (Exception e){
-            top1.setText("LY");
+            top8.setText("LY");
         }
 
         try{
