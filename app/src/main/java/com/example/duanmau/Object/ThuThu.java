@@ -5,11 +5,13 @@ public class ThuThu {
     private String HoTen;
     private String MatKhau;
 
+
     public ThuThu(String maTT, String hoTen, String matKhau) {
         MaTT = maTT;
         HoTen = hoTen;
         MatKhau = matKhau;
     }
+
 
     public ThuThu() {
     }

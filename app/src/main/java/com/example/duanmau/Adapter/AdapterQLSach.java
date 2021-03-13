@@ -115,6 +115,7 @@ public class AdapterQLSach extends BaseAdapter {
                         sach_ed_giathue.setError("");
                     }
 
+
                     @Override
                     public void afterTextChanged(Editable s) {
 
@@ -152,11 +153,29 @@ public class AdapterQLSach extends BaseAdapter {
                             sach_ed_giathue.setError("Giá thuê không được để trống");
                             err+=1;
                         }
+                        else{
+                            try{
+                                Integer.parseInt(sach_ed_giathue.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                sach_ed_giathue.setError("Giá thuê phải là kiểu số nguyên");
+                            }
+                        }
+
 
                         if(sach_ed_maloai.getEditText().getText().toString().trim().matches("")){
                             sach_ed_maloai.setError("Mã loại không được để trống");
                             err+=1;
                         }
+                        else{
+                            try{
+                                Integer.parseInt(sach_ed_maloai.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                sach_ed_maloai.setError("Mã loại phải là kiểu số nguyên");
+                            }
+                        }
+
 
                         if(err>0){
                             Toast.makeText(context, "Vui lòng kiểm tra lại thông tin", Toast.LENGTH_SHORT).show();

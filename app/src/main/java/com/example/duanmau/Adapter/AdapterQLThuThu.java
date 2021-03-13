@@ -76,12 +76,14 @@ public class AdapterQLThuThu extends BaseAdapter {
         viewHolder.qltt_adapter_matkhau.setText("Mật khẩu: " + hidePass);
 
         thuThuDAO= new ThuThuDAO(context);
-        dialog = new Dialog(context);
-        dialog.setContentView(R.layout.fab_themnguoidung);
+
 
         viewHolder.thuthu_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog = new Dialog(context);
+                dialog.setContentView(R.layout.fab_themnguoidung);
+
                 themnguoidung_ed_matt = dialog.findViewById(R.id.themnguoidung_ed_matt);
                 themnguoidung_ed_hoten = dialog.findViewById(R.id.themnguoidung_ed_hoten);
                 themnguoidung_ed_matkhau = dialog.findViewById(R.id.themnguoidung_ed_matkhau);
@@ -194,7 +196,7 @@ public class AdapterQLThuThu extends BaseAdapter {
                                 ((ContainerActivity)context).recreateThemNguoiDung();
                             }
                             else{
-                                themnguoidung_ed_matt.setError("Tên đăng nhập đã bị trùng");
+                                themnguoidung_ed_matt.setError("Đã có lỗi xảy ra vui lòng thử lại sau");
                             }
                         }
 

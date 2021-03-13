@@ -71,6 +71,8 @@ public class Fragment_QLPhieuMuon extends Fragment {
         if(thuThuDAO.getAllThuThu().size()<=1){
             thuThuDAO.insert(new ThuThu("trungkien","Kien","123456"));
             thuThuDAO.insert(new ThuThu("xuantrang","Trang","123456"));
+//            thuThuDAO.insert(new ThuThu("trungkien","Kien","Nam","123456"));
+//            thuThuDAO.insert(new ThuThu("xuantrang","Trang","Nu","123456"));
 
             thanhVienDAO.insert(new ThanhVien(1,"Nguyen Thi Thuy Linh","18-12-1997"));
             thanhVienDAO.insert(new ThanhVien(2,"Nguyen Van My","10-02-1994"));
@@ -128,16 +130,13 @@ public class Fragment_QLPhieuMuon extends Fragment {
             phieuMuonDAO.insert(new PhieuMuon(31,"xuantrang",5,8,"27-02-2020",0,18000));
         }
 
-
-
-
         qlpm_lv = view.findViewById(R.id.qlpm_lv);
         phieuMuonList = new ArrayList<>();
         phieuMuonDAO = new PhieuMuonDAO(getActivity());
         phieuMuonList = phieuMuonDAO.getAllPhieuMuon();
         AdapterQLPhieuMuon qlpmAdapter = new AdapterQLPhieuMuon(getActivity(),phieuMuonList);
         qlpm_lv.setAdapter(qlpmAdapter);
-//        phieuMuonDAO.dropPhieuMuonTable();
+
         fab_phieumuon = view.findViewById(R.id.fab_phieumuon);
         dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.fab_phieumuon);
@@ -157,9 +156,7 @@ public class Fragment_QLPhieuMuon extends Fragment {
 
                 phieumuon_ed_matt.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -167,16 +164,12 @@ public class Fragment_QLPhieuMuon extends Fragment {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_matv.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -184,16 +177,12 @@ public class Fragment_QLPhieuMuon extends Fragment {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_masach.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -201,60 +190,40 @@ public class Fragment_QLPhieuMuon extends Fragment {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_ngaymuon.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         phieumuon_ed_ngaymuon.setError("");
                     }
-
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_trasach.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         phieumuon_ed_trasach.setError("");
                     }
-
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_tienthue.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         phieumuon_ed_tienthue.setError("");
                     }
-
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
 
@@ -263,28 +232,71 @@ public class Fragment_QLPhieuMuon extends Fragment {
                     public void onClick(View v) {
                         int err=0;
                         if(phieumuon_ed_matt.getEditText().getText().toString().trim().matches("")){
-                            phieumuon_ed_matt.setError("Tên thành viên không được để trống");
+                            phieumuon_ed_matt.setError("Mã thủ thư không được để trống");
                             err+=1;
                         }
+
                         if(phieumuon_ed_matv.getEditText().getText().toString().trim().matches("")){
-                            phieumuon_ed_matv.setError("Năm sinh không được để trống");
+                            phieumuon_ed_matv.setError("Mã thành viên không được để trống");
                             err+=1;
                         }
+                        else{
+                            try{
+                                Integer.parseInt(phieumuon_ed_matv.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                phieumuon_ed_matv.setError("Mã thành viên phải là kiểu số nguyên");
+                            }
+                        }
+
+
                         if(phieumuon_ed_masach.getEditText().getText().toString().trim().matches("")){
-                            phieumuon_ed_masach.setError("Tên thành viên không được để trống");
+                            phieumuon_ed_masach.setError("Mã sách không được để trống");
                             err+=1;
                         }
+                        else{
+                            try{
+                                Integer.parseInt(phieumuon_ed_masach.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                phieumuon_ed_masach.setError("Mã sách phải là kiểu số nguyên");
+                            }
+                        }
+
+
                         if(phieumuon_ed_ngaymuon.getEditText().getText().toString().trim().matches("")){
                             phieumuon_ed_ngaymuon.setError("Năm sinh không được để trống");
                             err+=1;
                         }
+
                         if(phieumuon_ed_trasach.getEditText().getText().toString().trim().matches("")){
-                            phieumuon_ed_masach.setError("Tên thành viên không được để trống");
+                            phieumuon_ed_masach.setError("Vui lòng chọn trạng thái trả sách");
                             err+=1;
                         }
+                        else{
+                            if(!(phieumuon_ed_trasach.getEditText().getText().toString().equalsIgnoreCase("0")
+                                    ||phieumuon_ed_trasach.getEditText().getText().toString().equalsIgnoreCase("1"))){
+                                phieumuon_ed_trasach.setError("Vui lòng chọn trạng thái trả sách là 0 hoặc 1");
+                                err+=1;
+                            }
+                        }
+
+
                         if(phieumuon_ed_trasach.getEditText().getText().toString().trim().matches("")){
                             phieumuon_ed_ngaymuon.setError("Năm sinh không được để trống");
+
                             err+=1;
+                        }
+                        if(phieumuon_ed_tienthue.getEditText().getText().toString().trim().matches("")){
+                            phieumuon_ed_tienthue.setError("Tiền thuê không được để trống");
+                            err+=1;
+                        }else{
+                            try{
+                                Integer.parseInt(phieumuon_ed_tienthue.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                phieumuon_ed_tienthue.setError("Tiền thuê phải là kiểu số nguyên");
+                            }
                         }
 
                         if(err>0){

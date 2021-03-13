@@ -99,9 +99,7 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
 
                 phieumuon_ed_matt.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -109,9 +107,7 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_matv.getEditText().addTextChangedListener(new TextWatcher() {
@@ -126,16 +122,12 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_masach.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -143,16 +135,12 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_ngaymuon.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -160,16 +148,12 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_trasach.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -177,9 +161,7 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 phieumuon_ed_tienthue.getEditText().addTextChangedListener(new TextWatcher() {
@@ -193,10 +175,9 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
                         phieumuon_ed_tienthue.setError("");
                     }
 
-                    @Override
-                    public void afterTextChanged(Editable s) {
 
-                    }
+                    @Override
+                    public void afterTextChanged(Editable s) {}
                 });
 
 
@@ -213,24 +194,65 @@ public class AdapterQLPhieuMuon extends BaseAdapter {
                             phieumuon_ed_matv.setError("Mã thành viên không được để trống");
                             err+=1;
                         }
+                        else{
+                            try{
+                                Integer.parseInt(phieumuon_ed_matv.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                phieumuon_ed_matv.setError("Mã thành viên phải là kiểu số nguyên");
+                            }
+                        }
+
 
                         if(phieumuon_ed_masach.getEditText().getText().toString().trim().matches("")){
                             phieumuon_ed_masach.setError("Mã sách không được để trống");
                             err+=1;
                         }
-                        if(phieumuon_ed_ngaymuon.getEditText().getText().toString().trim().matches("")){
-                            phieumuon_ed_ngaymuon.setError("Ngày mượn không được để trống");
-                            err+=1;
+                        else{
+                            try{
+                                Integer.parseInt(phieumuon_ed_masach.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                phieumuon_ed_masach.setError("Mã sách phải là kiểu số nguyên");
+                            }
                         }
-                        if(phieumuon_ed_trasach.getEditText().getText().toString().trim().matches("")){
-                            phieumuon_ed_trasach.setError("Trả sách không được để trống");
+
+
+                        if(phieumuon_ed_ngaymuon.getEditText().getText().toString().trim().matches("")){
+                            phieumuon_ed_ngaymuon.setError("Năm sinh không được để trống");
                             err+=1;
                         }
 
+                        if(phieumuon_ed_trasach.getEditText().getText().toString().trim().matches("")){
+                            phieumuon_ed_trasach.setError("Vui lòng chọn trạng thái trả sách");
+                            err+=1;
+                        }
+                        else{
+                            if(!(phieumuon_ed_trasach.getEditText().getText().toString().equalsIgnoreCase("0")
+                                    ||phieumuon_ed_trasach.getEditText().getText().toString().equalsIgnoreCase("1"))){
+                                phieumuon_ed_trasach.setError("Vui lòng chọn trạng thái trả sách là 0 hoặc 1");
+                                err+=1;
+                            }
+                        }
+
+
+                        if(phieumuon_ed_trasach.getEditText().getText().toString().trim().matches("")){
+                            phieumuon_ed_ngaymuon.setError("Năm sinh không được để trống");
+
+                            err+=1;
+                        }
                         if(phieumuon_ed_tienthue.getEditText().getText().toString().trim().matches("")){
                             phieumuon_ed_tienthue.setError("Tiền thuê không được để trống");
                             err+=1;
+                        }else{
+                            try{
+                                Integer.parseInt(phieumuon_ed_tienthue.getEditText().getText().toString());
+                            }catch (NumberFormatException error){
+                                err+=1;
+                                phieumuon_ed_tienthue.setError("Tiền thuê phải là kiểu số nguyên");
+                            }
                         }
+
 
                         if(err>0){
                             Toast.makeText(context, "Vui lòng kiểm tra lại thông tin", Toast.LENGTH_SHORT).show();

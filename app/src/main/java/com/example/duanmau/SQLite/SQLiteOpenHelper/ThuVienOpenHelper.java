@@ -13,12 +13,14 @@ public class ThuVienOpenHelper extends SQLiteOpenHelper {
     }
 
     public String THUTHU_TABLE_NAME = "THUTHU";
+//    public String THUTHU_COLUMN_GT = "GIOITINH";
     public String THUTHU_COLUMN_MATT = "MATT";
     public String THUTHU_COLUMN_HOTEN = "HOTEN";
     public String THUTHU_COLUMN_MATKHAU = "MATKHAU";
     public String THUTHU_DROP_TABLE = "DROP TABLE IF EXISTS " + THUTHU_TABLE_NAME;
     public String THUTHU_CREATE_TABLE = "CREATE TABLE "+THUTHU_TABLE_NAME+"("
             +THUTHU_COLUMN_MATT+ " VARCHAR PRIMARY KEY, "
+//            +THUTHU_COLUMN_GT + " INTEGER,"
             +THUTHU_COLUMN_HOTEN + " VARCHAR,"
             +THUTHU_COLUMN_MATKHAU + " VARCHAR )";
 

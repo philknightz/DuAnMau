@@ -69,23 +69,16 @@ public class Fragment_QLLoaiSach extends Fragment {
                 loaisach_btn_xacnhan = dialog.findViewById(R.id.loaisach_btn_xacnhan);
                 loaisach_btn_huy = dialog.findViewById(R.id.loaisach_btn_huy);
 
-
-
                 loaisach_ed_tenloai.getEditText().addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         loaisach_ed_tenloai.setError("");
                     }
 
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
 
